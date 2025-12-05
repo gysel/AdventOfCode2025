@@ -5,11 +5,11 @@ fun main() {
             val (first, last) = it.split('-').map(String::toLong)
             first to last
         }
-    solve("Part 1", 23534117921L) {
-        iterate(data, ::isInvalidNumber1)
+    "Part 1" {
+        iterate(data, ::isInvalidNumber1) shouldBe 23534117921L
     }
-    solve("Part 2", 31755323497) {
-        iterate(data, ::isInvalidNumber2)
+    "Part 2" {
+        iterate(data, ::isInvalidNumber2) shouldBe 31755323497L
     }
 
 }

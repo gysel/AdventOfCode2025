@@ -8,11 +8,12 @@ fun main() {
         from..to
     }
     val available: List<Long> = lines.drop(fresh.size + 1).map(String::toLong)
-    solve("Part 1", 638) {
-        available.count { food -> fresh.any { food in it } }
+
+    "Part 1" {
+        available.count { food -> fresh.any { food in it } } shouldBe 638
     }
-    solve("Part 2", 352946349407338) {
-        countFreshFoods(fresh)
+    "Part 2" {
+        countFreshFoods(fresh) shouldBe 352946349407338
     }
 }
 

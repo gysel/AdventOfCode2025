@@ -9,9 +9,9 @@ curl -s https://adventofcode.com/2025/day/$DAY/input --cookie "session=${SESSION
 cat << EOF > src/main/kotlin/Day$DAY_FORMATTED.kt
 fun main() {
     val lines = InputData.readLines("day$DAY_FORMATTED.txt")
-    solve("Part 1", null) {
+    "Part 1" {
     }
-    solve("Part 2", null) {
+    "Part 2" {
     }
 
 }

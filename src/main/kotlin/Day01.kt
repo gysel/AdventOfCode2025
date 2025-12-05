@@ -1,16 +1,16 @@
 fun main() {
     val lines = InputData.readLines("day01.txt")
     val instruction = parseInput(lines)
-    solve("Part 1", 1081) {
+    "Part 1" {
         var position = 50
         var solution = 0
         instruction.forEach { (direction, steps) ->
             position = (position + steps * direction) % 100
             if (position == 0) solution++
         }
-        solution
+        solution shouldBe 1081
     }
-    solve("Part 2", 6689) {
+    "Part 2" {
         var position = 50
         var solution = 0
         instruction.forEach { (direction, steps) ->
@@ -19,9 +19,8 @@ fun main() {
                 if (position == 0) solution++
             }
         }
-        solution
+        solution shouldBe 6689
     }
-
 }
 
 private fun parseInput(lines: List<String>): List<Pair<Int, Int>> = lines.map { line ->

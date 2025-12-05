@@ -1,11 +1,11 @@
 fun main() {
     val lines: List<List<Int>> = InputData.readLines("day03.txt")
         .map { line -> line.map { it.digitToInt() } }
-    solve("Part 1", 17405) {
-        lines.sumOf { line -> findMaxVoltage(line,2) }
+    "Part 1" {
+        lines.sumOf { line -> findMaxVoltage(line, 2) } shouldBe 17405L
     }
-    solve("Part 2", 171990312704598L) {
-        lines.sumOf { line -> findMaxVoltage(line, 12) }
+    "Part 2" {
+        lines.sumOf { line -> findMaxVoltage(line, 12) } shouldBe 171990312704598L
     }
 }
 

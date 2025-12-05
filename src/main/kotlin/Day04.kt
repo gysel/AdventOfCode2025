@@ -5,11 +5,11 @@ fun main() {
     }
 
     val grid = loadInput("day04.txt")
-    solve("Part 1", 1416) {
-        grid.findMoveableRolls().size
+    "Part 1" {
+        grid.findMoveableRolls().size shouldBe 1416
     }
 
-    solve("Part 2", 9086) {
+    "Part 2" {
         val newGrid = grid.toMutableMap()
         var rollsRemoved = 0
         do {
@@ -17,7 +17,7 @@ fun main() {
             rolls.forEach { (coordinates, _) -> newGrid[coordinates] = '.' }
             rollsRemoved += rolls.size
         } while (rolls.isNotEmpty())
-        rollsRemoved
+        rollsRemoved shouldBe 9086
     }
 }
 
