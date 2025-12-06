@@ -1,7 +1,7 @@
 fun main() {
-    solve("Example 1", 13) {
+    "Example 1" {
         val grid = loadInput("example04-1.txt")
-        grid.findMoveableRolls().size
+        grid.findMoveableRolls().size shouldBe 13
     }
 
     val grid = loadInput("day04.txt")
